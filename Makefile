@@ -2,6 +2,8 @@ NAME = codexion
 CC = cc
 CFLAGS = -Wall -Wextra -Werror -pthread
 
+SRC = codexion.c
+
 OBJ = $(SRC:.c=.o)
 
 all: $(NAME)
@@ -12,9 +14,9 @@ $(NAME): $(OBJ)
 clean:
 	rm -f $(OBJ)
 
-fclean:
-	rm -f $(NAME)
+fclean: clean
+		rm -f $(NAME)
 
 re: fclean all
 
-.PHONY all clean fclean re
+.PHONY: all clean fclean re
