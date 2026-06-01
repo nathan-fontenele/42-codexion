@@ -2,7 +2,8 @@ NAME = codexion
 CC = cc
 CFLAGS = -Wall -Wextra -Werror -pthread
 
-SRC = codexion.c
+SRC = codexion.c \
+	./src/init.c
 
 OBJ = $(SRC:.c=.o)
 
