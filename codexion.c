@@ -1,5 +1,13 @@
 #include "codexion.h"
 
+long get_time_in_ms(void)
+{
+    struct timeval time;
+
+    gettimeofday(&time, NULL);
+    return ((time.tv_sec * 1000) + (time.tv_usec / 1000));
+}
+
 int main (int argc, char **argv)
 {
     if (argc != 9)
